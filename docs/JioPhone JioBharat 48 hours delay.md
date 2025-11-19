@@ -1,4 +1,4 @@
-#### <mark>Feature 2467843 : Enhancement in existing JioBharat & JioPhone Plan delay visibility by 48 hrs.</mark>
+#### <mark>Feature Test : This is a sample feature for testing</mark>
 
 ###### v0.1 Nov'2025
 
@@ -12,51 +12,29 @@
 
 ## Draft Solution Design
 
-##### Impact EBDM, EDIF
+##### Impact systems
 
 ---
 
-- Put incoming IMEI into **_```48HOURS list```(new)_**,
-  - **_```48HOURS_FLAG = N``` (new)_**
-  - Sent to EDIF
-  - counter starts for 48 Hrs. to update ```48HOURS_FLAG```
-- **Case1 :**
-  - No letch event received within 48 Hrs. for the same IMEI
-  - After 48 Hrs.
-    - Update the ```48HOURS_FLAG = Y```
-    - Send it to EDIF
-    - Remove entry from ```48HOURS list```
+- **This is the BOLD text in the IOT sample feature**
 
-- **Case2 :**
-  - Letch event received within 48 Hrs. for the same IMEI
-    - IMEI received exists in ```48HOURS list```
-    - Remove the entry from the ```48HOURS list```
-    - Insert the new entry in ```48HOURS list```
-      - After 48 Hrs. (for the new entry, if no further letch event received)
-      - Update the ```48HOURS_FLAG = Y```
-      - Send it to EDIF
-      - Remove from ```48HOURS list```
+- <mark>This is the HTML tag example for highlighted text in mkdocs</mark>
 
-- _**In CCI to EDIF :**_
+- ~~This one is the example of the striked text in IOT sample feature~~
 
-> If ```48HOURS_FLAG=Y``` or ```48HOURS_FLAG=NULL```
+- <s>This one is the example of the striked text via ```<s>``` parameter in IOT sample feature</s>
+
+- <del>This one is the example of the striked text via ```<del>``` parameter in IOT sample feature</del>
+
+> If ```48HOURS Passed```
 
 ```sh
-Channel to show the JioBharat/JioPhone plan
+Channel to show the plan
 ```
 
 > otherwise
 
 ```sh
-Channel not to show the JioBharat/JioPhone plan
+Channel not to show the plan
 ```
 
-## Flowcharts
-
-```mermaid
-graph LR
-  A[Start] --> B{Failure?};
-  B -->|Yes| C[Investigate...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Success!];

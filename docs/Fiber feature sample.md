@@ -11,12 +11,12 @@
 ##### Impact Jio.com, MyJio
 ---
 
-- ***In CCI to EDIF :***
-> If ```48HOURS_FLAG=Y``` or ```48HOURS_FLAG=NULL```
+- ***In API :***
+> If ```FLAG=Y``` or ```FLAG=NULL```
 ```sh 
-Channel to show the JioBharat/JioPhone plan
+Channel to show the plan
 ```
 > otherwise
 ```sh 
-Channel not to show the JioBharat/JioPhone plan
+Channel not to show the plan
 ```

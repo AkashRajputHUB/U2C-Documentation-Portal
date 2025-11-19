@@ -64,8 +64,6 @@ You can then access your documentation in a web browser, typically at:
 
 👉 [http://localhost:8000](http://localhost:8000)
 
-👉 [Puneet Sir's Guide](http://docs.jio.com/integration-arch/faq/)
-
 ---
 
 ## 6. Virtual Environment
