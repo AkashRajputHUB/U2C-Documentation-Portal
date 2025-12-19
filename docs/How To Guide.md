@@ -1,3 +1,32 @@
+# Install Python using installer
+
+- Pre-requistes
+	- Create a folder c:\utils
+Note: All installations to be done in this folder and NOT in the default Windows folder
+
+1. Go to the official Python downloads page for Windows: https://python.org/downloads/windows/.
+
+2. Download the latest stable version by clicking "Windows installer (64-bit)" or the appropriate option for your system.
+
+3. Locate the downloaded .exe file and run it to start the installation wizard.
+4. In the installer window, check the box that says Add python.exe to PATH.
+Note: This is a crucial step for running Python from the command line.
+
+5. Choose Customize installation.
+
+6. On the Optional Features page, remove the Option "for all users (requires admin privileges)", if you do not have admin privileges.
+
+7. In the Advanced Options page, in the Customize install location, change the install location to the folder created earlier.
+Note: if the default path specified is
+C:\Users\Akash.Rajput\AppData\Local\Programs\Python\Python313
+change to
+C:\utils\Python313 i.e. Install python in a folder inside c:\utils
+
+8. Select Install.
+
+9. Click Close once the installation is complete.
+
+
 # Installing MkDocs Material
 
 To install **MkDocs Material** using Python, you will use `pip`, Python's package installer. Ensure **Python** and **pip** are installed.
@@ -45,12 +74,19 @@ cd my-project
 
 Open the `mkdocs.yml` file in your project directory and add or modify the theme setting to use Material:
 
-```yaml
+```yml
 theme:
   name: material
-```
 
----
+features:
+    - navigation.tabs #For nav bar at top header
+
+nav:
+	- Home: index.md
+	- U2C Designs:
+		- U2C Designs/index.md
+		- Mobility: mobiloity.md
+```
 
 ## 5. Serve Your Documentation
 
@@ -79,6 +115,77 @@ You can then access your documentation in a web browser, typically at:
 ---
 
 
+# Installing MERMAID for flowchart rendering
+
+1. Opem command prompt and navigate to the python installation folder  
+- Run following Commands
+```
+	pip install mermaid-py
+	pip install mkdocs-mermaid2-plugin
+
+```
+- If you get error run these as well
+```
+	pip install mermaid-cli 
+	playwright install chromium
+```
+2. Add the below code in the yml file
+```yml
+markdown_extensions:
+  - pymdownx.superfences: #for flowchart renders
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+```
+To know..How to create flowcharts, Squence Diagrams in Mermaid [Click Here](https://docs.mermaidchart.com/mermaid-oss/syntax/flowchart.html#a-node-rhombus)
+
+# Going Live on Git
+
+1. create a new repository on the command line
+
+- echo "# U2C-Documentation-Portal" >> README.md
+
+```bash
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AkashRajputHUB/U2C-Documentation-Portal.git
+git push -u origin main
+
+```
+- push an existing repository from the command line
+
+```bash
+git remote add origin https://github.com/AkashRajputHUB/U2C-Documentation-Portal.git
+git branch -M main
+git push -u origin main
+```
+
+2. Process for github page (via tutorial)
+```bash
+git init  #to initiate the local git repository
+git add . #to add all the files in git repository
+git status #to check the file status
+git commit -m 'Initial commit' #to commit 
+git remote add origin https://github.com/AkashRajputHUB/U2C-Documentation-Portal.git (get this from the github once we create repository there)
+git branch -M main
+git push -u origin main
+```
+3. to update the live github pages
+
+```bash
+git add .
+git status
+git commit -m "Descriptive message about your updates"
+git push -u origin main
+```
+
+# for Markdown Syntax
+
+[Markdown syntax Guide](https://www.markdownguide.org/)
+
 ## 7. Text commands in markdown
 
 - This is example of _italic text_
@@ -96,6 +203,35 @@ You can then access your documentation in a web browser, typically at:
 - <del>This one is the example of the striked text via ```<del>``` parameter in IOT sample feature</del>
   > eg: ``<del>This one is the example of the striked text via ```<del>``` parameter in IOT sample feature</del>``
 
+- This is an example of creating hyperlink within the site pages [click here for useful links](useful links.md)
+> `[click here for useful links](useful links.md)`
+
+- This is an example of hyperlink [Jio.com](https://Jio.com)
+> `[Jio.com](https://Jio.com)`
+
+- Making section header as clickable:  
+`[Click Here for mermaid guide](#installing-mermaid-for-flowchart-rendering)` <!-- Keep the section header name in all small letter and keeping - berween each word-->  
+
+Example: [Click Here for mermaid guide](#installing-mermaid-for-flowchart-rendering)
+
+- Marking Comment in markdown
+`<!-- This is a comment example -->`  write the text in between `<!-- text -->`  
+Example: If you can't see the exmaple then it's working fine ;)  
+<!-- Keep the section header name in all small letter and keeping - berween each word-->  
+
+- This is an example of table :
+
+  |Test|Test|Test|
+  |---|---|---|
+  |123|456|678|
+  
+
+>eg: ```|Test|Test|Test|``` ```table header```
+
+  ```|---|---|---|``` ```for new line```
+
+  ```|123|456|678|```   ```content```
+
 > [!NOTE]  
 > Highlights information that users should take into account, even when skimming.
 
@@ -112,15 +248,10 @@ You can then access your documentation in a web browser, typically at:
 > Negative potential consequences of an action.
 
 
-- This is an example of table :
+- Adding image in the  markdown  
+`![alt text](Isolated.png "Title")`
 
-  |Test|Test|Test|
-  |---|---|---|
-  |123|456|678|
-  
 
->eg: ```|Test|Test|Test|``` ```table header```
+- Example : `![Jio](assets/Jio.png "Jio Logo")`
 
-  ```|---|---|---|``` ```for new line```
-
-  ```|123|456|678|```   ```content```us
+![Jio](assets/Jio.png "Jio Logo")

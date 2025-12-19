@@ -1,47 +1,47 @@
-site_name: U2C Solution Designs    
+site_name: U2C Solution Designs   
 markdown_extensions:
-  - pymdownx.superfences:
+  - pymdownx.superfences: #for flowchart renders
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
-      - Home: index.md
-      - Designs:
-        - U2C Designs: 
-            - Mobility: 
-                - Feature 2467843: JioPhone JioBharat 48 hours delay.md
-            - Home:
-                - Fiber: 
-                    - Feature 1234: Fiber feature sample.md
-                - AirFiber: 
-                    - Feature 5678: Airfiber feature sample.md
-            - IOT:
-                - Feature ABC: IOT feature sample.md
-      - Useful Links: useful links.md
-      - Flow charts: diagram.md
+      #- Home: index.md
+      - Line of Business: 
+        - U2C Designs/index.md
+        - Mobility:
+          - U2C Designs/Mobility/index.md
+          - Feature Example: JioPhone JioBharat 48 hours delay.md
+        - Home:
+          - Fiber: 
+            - Feature 1234: Fiber feature sample.md
+          - AirFiber: 
+            - Feature 5678: Airfiber feature sample.md
+        - IOT:
+          - Feature ABC: IOT feature sample.md
       - Guide: 
         - Mkdocs & Markdown Guide: How To Guide.md
-        - Puneer Sir's Guidelines: http://docs.jio.com/integration-arch/faq/
+      - Flow charts: diagram.md
       - About: About.md
-      
-      
+
     
 theme:
     name: material
-    logo: asset/Jio.png
-    favicon: asset/Jio.png
+    logo: assets/Jiologored.png
+    favicon: assets/Jio.png
     palette:
         primary: blue gray
         accent: red
     features:
-    - navigation.tabs #for navigation options at top header
+    #- navigation.tabs #for navigation options at top header
     - navigation.tabs.sticky # to prevent nav hiding
     - navigation.path #to show the navigation paths
-    - navigation.sections #to group the left panel sections
+    #- navigation.sections #to group the left panel sections
+    - toc.integrate #integrate table of content in nav panel
     - toc.follow #to keep the left pan follow the content on .md data 
     - navigation.top #for back to top button
     - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.instant.progress
-    - Search.highlight
+    - navigation.instant.prefetch #to preload the pages when user howers the link
+    - navigation.instant.progress #for loading bar/ring
+    - navigation.indexes #to have the index pages for each sub section in the nav panel
+    #- Search.highlight #to highlight searched content on md pages
