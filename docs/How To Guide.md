@@ -1,31 +1,31 @@
 # Install Python using installer
 
-- Pre-requistes
-	- Create a folder c:\utils
-Note: All installations to be done in this folder and NOT in the default Windows folder
+1. Pre-requistes
+Create a folder c:\utils
+> Note: All installations to be done in this folder and NOT in the default Windows folder
 
-1. Go to the official Python downloads page for Windows: https://python.org/downloads/windows/.
+2. Go to the official Python downloads page for Windows: https://python.org/downloads/windows/.
 
-2. Download the latest stable version by clicking "Windows installer (64-bit)" or the appropriate option for your system.
+3. Download the latest stable version by clicking "Windows installer (64-bit)" or the appropriate option for your system.
 
-3. Locate the downloaded .exe file and run it to start the installation wizard.
-4. In the installer window, check the box that says Add python.exe to PATH.
+4. Locate the downloaded .exe file and run it to start the installation wizard.
+
+5. In the installer window, check the box that says Add python.exe to PATH.
 Note: This is a crucial step for running Python from the command line.
 
-5. Choose Customize installation.
+6. Choose Customize installation.
 
-6. On the Optional Features page, remove the Option "for all users (requires admin privileges)", if you do not have admin privileges.
+7. On the Optional Features page, remove the Option "for all users (requires admin privileges)", if you do not have admin privileges.
 
-7. In the Advanced Options page, in the Customize install location, change the install location to the folder created earlier.
+8. In the Advanced Options page, in the Customize install location, change the install location to the folder created earlier.
 Note: if the default path specified is
 C:\Users\Akash.Rajput\AppData\Local\Programs\Python\Python313
 change to
 C:\utils\Python313 i.e. Install python in a folder inside c:\utils
 
-8. Select Install.
+9. Select Install.
 
-9. Click Close once the installation is complete.
-
+10. Click Close once the installation is complete.
 
 # Installing MkDocs Material
 
@@ -33,7 +33,7 @@ To install **MkDocs Material** using Python, you will use `pip`, Python's packag
 
 ---
 
-## 1. Verify Python and pip Installation
+1. Verify Python and pip Installation
 
 Before installing MkDocs Material, verify that you have **Python** and **pip** installed on your system.  
 You can check their versions with the following commands in your terminal:
@@ -47,7 +47,7 @@ If they are not installed, you will need to install **Python** first, which typi
 
 ---
 
-## 2. Install MkDocs Material
+2. Install MkDocs Material
 
 Open your terminal or command prompt and execute the following command:
 
@@ -59,7 +59,7 @@ This command will download and install the **MkDocs Material** theme and its dep
 
 ---
 
-## 3. Create a New MkDocs Project
+3. Create a New MkDocs Project
 
 If you are starting a new documentation project, create a new MkDocs project with:
 
@@ -70,7 +70,7 @@ cd my-project
 
 ---
 
-## 4. Configure the Material Theme
+4. Configure the Material Theme
 
 Open the `mkdocs.yml` file in your project directory and add or modify the theme setting to use Material:
 
@@ -88,7 +88,7 @@ nav:
 		- Mobility: mobiloity.md
 ```
 
-## 5. Serve Your Documentation
+5. Serve Your Documentation
 
 Navigate to your project directory in the terminal and run the MkDocs development server to preview your site with the Material theme:
 
@@ -102,7 +102,7 @@ You can then access your documentation in a web browser, typically at:
 
 ---
 
-## 6. Virtual Environment
+6. Virtual Environment
 
 - Create a Virtual environment
 
@@ -114,10 +114,9 @@ You can then access your documentation in a web browser, typically at:
 
 ---
 
-
 # Installing MERMAID for flowchart rendering
 
-1. Opem command prompt and navigate to the python installation folder  
+1. Open command prompt and navigate to the python installation folder  
 - Run following Commands
 ```
 	pip install mermaid-py
@@ -138,15 +137,15 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 ```
+
 To know..How to create flowcharts, Squence Diagrams in Mermaid [Click Here](https://docs.mermaidchart.com/mermaid-oss/syntax/flowchart.html#a-node-rhombus)
 
 # Going Live on Git
 
 1. create a new repository on the command line
 
-- echo "# U2C-Documentation-Portal" >> README.md
-
 ```bash
+echo "# U2C-Documentation-Portal" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
@@ -155,7 +154,7 @@ git remote add origin https://github.com/AkashRajputHUB/U2C-Documentation-Portal
 git push -u origin main
 
 ```
-- push an existing repository from the command line
+2. push an existing repository from the command line
 
 ```bash
 git remote add origin https://github.com/AkashRajputHUB/U2C-Documentation-Portal.git
@@ -163,17 +162,22 @@ git branch -M main
 git push -u origin main
 ```
 
-2. Process for github page (via tutorial)
+3. Process for github page (via tutorial)
+
 ```bash
 git init  #to initiate the local git repository
 git add . #to add all the files in git repository
 git status #to check the file status
 git commit -m 'Initial commit' #to commit 
+
+now, go on gitbug create a new repository and copy the below remote details`
+
 git remote add origin https://github.com/AkashRajputHUB/U2C-Documentation-Portal.git (get this from the github once we create repository there)
 git branch -M main
 git push -u origin main
 ```
-3. to update the live github pages
+
+4. Update the live github pages
 
 ```bash
 git add .
@@ -182,11 +186,9 @@ git commit -m "Descriptive message about your updates"
 git push -u origin main
 ```
 
-# for Markdown Syntax
+# For Markdown Syntax
 
 [Markdown syntax Guide](https://www.markdownguide.org/)
-
-## 7. Text commands in markdown
 
 - This is example of _italic text_
   >eg: ```This is example of _italic text_```
