@@ -1,6 +1,7 @@
-# Install Python using installer
+# Installation Guide
+## Install Python using installer
 
-1. Pre-requistes
+1. Pre-requistes  
 Create a folder c:\utils
 > Note: All installations to be done in this folder and NOT in the default Windows folder
 
@@ -27,11 +28,9 @@ C:\utils\Python313 i.e. Install python in a folder inside c:\utils
 
 10. Click Close once the installation is complete.
 
-# Installing MkDocs Material
+## Installing MkDocs Material
 
 To install **MkDocs Material** using Python, you will use `pip`, Python's package installer. Ensure **Python** and **pip** are installed.
-
----
 
 1. Verify Python and pip Installation
 
@@ -114,7 +113,7 @@ You can then access your documentation in a web browser, typically at:
 
 ---
 
-# Installing MERMAID for flowchart rendering
+## Installing MERMAID for flowchart rendering
 
 1. Open command prompt and navigate to the python installation folder  
 - Run following Commands
@@ -154,6 +153,7 @@ git remote add origin https://github.com/AkashRajputHUB/U2C-Documentation-Portal
 git push -u origin main
 
 ```
+
 2. push an existing repository from the command line
 
 ```bash
@@ -186,9 +186,9 @@ git commit -m "Descriptive message about your updates"
 git push -u origin main
 ```
 
-# For Markdown Syntax
+## Markdown Syntax
 
-[Markdown syntax Guide](https://www.markdownguide.org/)
+[Visit the Markdown syntax Guide](https://www.markdownguide.org/)
 
 - This is example of _italic text_
   >eg: ```This is example of _italic text_```
@@ -233,22 +233,7 @@ Example: If you can't see the exmaple then it's working fine ;)
   ```|---|---|---|``` ```for new line```
 
   ```|123|456|678|```   ```content```
-
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
+  
 
 - Adding image in the  markdown  
 `![alt text](Isolated.png "Title")`
