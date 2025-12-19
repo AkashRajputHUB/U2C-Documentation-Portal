@@ -1,4 +1,4 @@
-site_name: U2C Solution Designs   
+site_name: Documentation Portal Sample Site   
 markdown_extensions:
   - pymdownx.superfences: #for flowchart renders
       custom_fences:
@@ -6,21 +6,18 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
-      #- Home: index.md
+      - Home: index.md
       - Line of Business: 
         - U2C Designs/index.md
         - Mobility:
           - U2C Designs/Mobility/index.md
-          - Feature Example: JioPhone JioBharat 48 hours delay.md
+          - Feature Example: sample.md
         - Home:
           - Fiber: 
             - Feature 1234: Fiber feature sample.md
-          - AirFiber: 
-            - Feature 5678: Airfiber feature sample.md
         - IOT:
           - Feature ABC: IOT feature sample.md
-      - Guide: 
-        - Mkdocs & Markdown Guide: How To Guide.md
+      - Mkdocs & Markdown Guide: How To Guide.md
       - Flow charts: diagram.md
       - About: About.md
 

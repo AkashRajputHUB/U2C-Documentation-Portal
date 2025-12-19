@@ -255,3 +255,54 @@ Example: If you can't see the exmaple then it's working fine ;)
 - Example : `![Jio](assets/Jio.png "Jio Logo")`
 
 ![Jio](assets/Jio.png "Jio Logo")
+
+---
+
+# My Sample YAML file
+
+```yml
+site_name: Documentation Portal Sample Site   
+markdown_extensions:
+  - pymdownx.superfences: #for flowchart renders
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+      - Home: index.md
+      - Line of Business: 
+        - U2C Designs/index.md
+        - Mobility:
+          - U2C Designs/Mobility/index.md
+          - Feature Example: sample.md
+        - Home:
+          - Fiber: 
+            - Feature 1234: Fiber feature sample.md
+        - IOT:
+          - Feature ABC: IOT feature sample.md
+      - Mkdocs & Markdown Guide: How To Guide.md
+      - Flow charts: diagram.md
+      - About: About.md
+   
+theme:
+    name: material
+    logo: assets/Jiologored.png
+    favicon: assets/Jio.png
+    palette:
+        primary: blue gray
+        accent: red
+    features:
+    #- navigation.tabs #for navigation options at top header
+    - navigation.tabs.sticky # to prevent nav hiding
+    - navigation.path #to show the navigation paths
+    #- navigation.sections #to group the left panel sections
+    - toc.integrate #integrate table of content in nav panel
+    - toc.follow #to keep the left pan follow the content on .md data 
+    - navigation.top #for back to top button
+    - navigation.instant
+    - navigation.instant.prefetch #to preload the pages when user howers the link
+    - navigation.instant.progress #for loading bar/ring
+    - navigation.indexes #to have the index pages for each sub section in the nav panel
+    #- Search.highlight #to highlight searched content on md pages
+
+```
