@@ -5,6 +5,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - glightbox #to make the images zoomable          
 nav:
       - Home: index.md
       - Line of Business: 

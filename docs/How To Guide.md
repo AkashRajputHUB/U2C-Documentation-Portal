@@ -52,6 +52,7 @@ Open your terminal or command prompt and execute the following command:
 
 ```bash
 pip install mkdocs-material
+pip install mkdocs-glightbox <!-- for image zoom -->
 ```
 
 This command will download and install the **MkDocs Material** theme and its dependencies.
@@ -79,7 +80,8 @@ theme:
 
 features:
     - navigation.tabs #For nav bar at top header
-
+plugins:
+  - glightbox #to make the images zoomable
 nav:
 	- Home: index.md
 	- U2C Designs:
@@ -237,6 +239,7 @@ Example: If you can't see the exmaple then it's working fine ;)
 
 - Adding image in the  markdown  
 `![alt text](Isolated.png "Title")`
+
 
 
 - Example : `![Jio](assets/Jio.png "Jio Logo")`
